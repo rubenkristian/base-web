@@ -1,17 +1,133 @@
+import { For } from "solid-js";
+import Card from "~/components/Card";
+import Chip from "~/components/Chip";
 import Container from "~/components/Container";
 
 export default function About() {
+  const skills: Array<{ text: string; color: string; icon: string }> = [
+    {
+      text: "PHP",
+      color: "hover:bg-indigo-500",
+      icon: "fa-brands fa-php",
+    },
+    {
+      text: "Laravel",
+      color: "hover:bg-red-600",
+      icon: "fa-brands fa-laravel",
+    },
+    {
+      text: "Node.js",
+      color: "hover:bg-green-500",
+      icon: "fa-brands fa-node-js",
+    },
+    {
+      text: "Go",
+      color: "hover:bg-blue-500",
+      icon: "fa-brands fa-golang",
+    },
+    {
+      text: "React",
+      color: "hover:bg-sky-500",
+      icon: "fa-brands fa-react",
+    },
+    {
+      text: "Vue",
+      color: "hover:bg-green-600",
+      icon: "fa-brands fa-vuejs",
+    },
+    {
+      text: "Docker",
+      color: "hover:bg-blue-400",
+      icon: "fa-brands fa-docker",
+    },
+    {
+      text: "PostgreSQL",
+      color: "hover:bg-indigo-500",
+      icon: "fa-solid fa-database",
+    },
+    {
+      text: "NextJS",
+      color: "hover:bg-white hover:text-black",
+      icon: "fa-solid fa-next-js",
+    },
+    {
+      text: "NestJS",
+      color: "hover:bg-rose-600",
+      icon: "fa-brands fa-nest-js",
+    },
+    {
+      text: "MongoDB",
+      color: "hover:bg-green-600",
+      icon: "fa-brands fa-mongodb",
+    },
+    {
+      text: "ElasticSearch",
+      color: "hover:bg-yellow-500",
+      icon: "fa-brands fa-elasticsearch",
+    },
+    {
+      text: "Meilisearch",
+      color: "hover:bg-pink-500",
+      icon: "fa-brands fa-meilisearch",
+    },
+    {
+      text: "Java",
+      color: "hover:bg-sky-700",
+      icon: "fa-brands fa-java",
+    },
+    {
+      text: "Kotlin",
+      color: "hover:bg-violet-600",
+      icon: "fa-brands fa-kotlin",
+    },
+    {
+      text: "REST API",
+      color: "hover:bg-yellow-500",
+      icon: "fa-solid fa-plug",
+    },
+  ];
+
+  const repos: Array<{
+    repo: string;
+    detail: string;
+    language: string;
+    color: string;
+  }> = [
+    {
+      repo: "Debio Indexer",
+      detail: "Full-stack app with NestJS, ElasticSearch, PostgreSQL.",
+      language: "TypeScript",
+      color: "text-blue-500",
+    },
+    {
+      repo: "Debio Frontend",
+      detail: "Frontend with Vue, Materialize CSS.",
+      language: "TypeScript",
+      color: "text-blue-500",
+    },
+    {
+      repo: "Myriad",
+      detail: "API app with NodeJS, MongoDB, NextJS.",
+      language: "TypeScript",
+      color: "text-blue-500",
+    },
+    {
+      repo: "Riichi City Indonesia",
+      detail: "Fullstack app with Go, SolidStart, TypeScript, MySQL, Fiber.",
+      language: "Go",
+      color: "text-blue-500",
+    },
+  ];
+
   return (
     <Container>
       <main class="text-center mx-auto">
         <div class="min-h-screen md:mx-0 mx-10 flex flex-col gap-4 text-left items-center justify-center">
           <div class="flex flex-col gap-2">
-            <h1 class="w-full font-bold text-xl text-white">
+            <h1 class="w-full font-bold text-4xl text-white">
               Hello, I'm Kristian Ruben
             </h1>
-            <h2 class="w-full font-bold text-xl text-white">
-              Full-stack Developer
-            </h2>
+            <h2 class="w-full text-2xl text-white">Full-stack Developer</h2>
             <p class="text-gray-200">
               Delivering powerful backend architectures and seamless frontend
               experiences.
@@ -25,7 +141,7 @@ export default function About() {
               class="w-10 h-10 flex items-center justify-center rounded-full border border-gray-400 text-gray-600 hover:border-white hover:text-white transition"
             >
               <svg
-                class="w-6 h-6"
+                class="w-8 h-8"
                 fill="none"
                 stroke="currentColor"
                 stroke-width="2"
@@ -102,7 +218,7 @@ export default function About() {
           <div class="flex flex-col gap-2">
             <div class="w-full font-bold text-xl text-white">About Me</div>
             <p class="text-gray-200 leading-relaxed">
-              I'm a full-stack developer with over nine years of experience,
+              I'm a full-stack developer with over nine years of experiences,
               having contributed to a wide range of companies—from{" "}
               <b>marketplaces</b> to <b>blockchain</b> platforms—building robust
               backend systems and&nbsp
@@ -112,102 +228,17 @@ export default function About() {
           </div>
           <div class="flex flex-col gap-2">
             <div class="w-full font-bold text-xl text-white">Projects</div>
-            <div class="flex flex-wrap gap-6 justify-center">
-              <a
-                href="https://github.com/rubenkristian/debio-indexer"
-                target="_blank"
-                class="w-72 bg-gray-800 rounded-xl shadow-lg p-5 transition hover:scale-105 hover:shadow-2xl"
-              >
-                <div class="flex items-center gap-3 mb-3">
-                  <i class="fa-brands fa-github text-2xl text-white"></i>
-                  <h3 class="text-white text-lg font-semibold">
-                    Debio Indexer
-                  </h3>
-                </div>
-                <p class="text-gray-300 text-sm mb-3">
-                  Full-stack app with NestJS, ElasticSearch, PostgreSQL.
-                </p>
-                <div class="flex items-center gap-3 text-gray-400 text-sm">
-                  <span>
-                    <i class="fa-solid fa-circle text-green-500"></i> TypeScript
-                  </span>
-                  <span>
-                    <i class="fa-solid fa-star"></i> 120
-                  </span>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/rubenkristian/debio-frontend"
-                target="_blank"
-                class="w-72 bg-gray-800 rounded-xl shadow-lg p-5 transition hover:scale-105 hover:shadow-2xl"
-              >
-                <div class="flex items-center gap-3 mb-3">
-                  <i class="fa-brands fa-github text-2xl text-white"></i>
-                  <h3 class="text-white text-lg font-semibold">
-                    Debio Frontend
-                  </h3>
-                </div>
-                <p class="text-gray-300 text-sm mb-3">
-                  Frontend with Vue, Materialize CSS.
-                </p>
-                <div class="flex items-center gap-3 text-gray-400 text-sm">
-                  <span>
-                    <i class="fa-solid fa-circle text-blue-500"></i> TypeScript
-                  </span>
-                  <span>
-                    <i class="fa-solid fa-star"></i> 85
-                  </span>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/rubenkristian/myriad-api"
-                target="_blank"
-                class="w-72 bg-gray-800 rounded-xl shadow-lg p-5 transition hover:scale-105 hover:shadow-2xl"
-              >
-                <div class="flex items-center gap-3 mb-3">
-                  <i class="fa-brands fa-github text-2xl text-white"></i>
-                  <h3 class="text-white text-lg font-semibold">Myriad</h3>
-                </div>
-                <p class="text-gray-300 text-sm mb-3">
-                  API with NodeJS, MongoDB, NextJS.
-                </p>
-                <div class="flex items-center gap-3 text-gray-400 text-sm">
-                  <span>
-                    <i class="fa-solid fa-circle text-yellow-500"></i>{" "}
-                    JavaScript
-                  </span>
-                  <span>
-                    <i class="fa-solid fa-star"></i> 60
-                  </span>
-                </div>
-              </a>
-
-              <a
-                href="https://github.com/riichi-mahjong-dev/backend-riichi"
-                target="_blank"
-                class="w-72 bg-gray-800 rounded-xl shadow-lg p-5 transition hover:scale-105 hover:shadow-2xl"
-              >
-                <div class="flex items-center gap-3 mb-3">
-                  <i class="fa-brands fa-github text-2xl text-white"></i>
-                  <h3 class="text-white text-lg font-semibold">
-                    Riichi City Indonesia
-                  </h3>
-                </div>
-                <p class="text-gray-300 text-sm mb-3">
-                  Fullstack app with Go, SolidStart, TypeScript, MySQL, Fiber.
-                </p>
-                <div class="flex items-center gap-3 text-gray-400 text-sm">
-                  <span>
-                    <i class="fa-solid fa-circle text-yellow-500"></i>{" "}
-                    JavaScript
-                  </span>
-                  <span>
-                    <i class="fa-solid fa-star"></i> 60
-                  </span>
-                </div>
-              </a>
+            <div class="flex flex-wrap gap-6">
+              <For each={repos}>
+                {(repo, _) => (
+                  <Card
+                    repo={repo.repo}
+                    detail={repo.detail}
+                    language={repo.language}
+                    color={repo.color}
+                  />
+                )}
+              </For>
             </div>
           </div>
           <div class="flex flex-col gap-2">
@@ -215,85 +246,15 @@ export default function About() {
               Skills & Technologies
             </div>
             <div class="flex flex-wrap gap-3 text-white">
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-indigo-500">
-                <i class="fa-brands fa-php"></i>
-                PHP
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-red-600">
-                <i class="fa-brands fa-laravel"></i>
-                Laravel
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-green-500">
-                <i class="fa-brands fa-node-js"></i>
-                Node.js
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-blue-500">
-                <i class="fa-brands fa-golang"></i>
-                Go
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-sky-500">
-                <i class="fa-brands fa-react"></i>
-                React
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-green-600">
-                <i class="fa-brands fa-vuejs"></i>
-                Vue
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-blue-400">
-                <i class="fa-brands fa-docker"></i>
-                Docker
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-indigo-500">
-                <i class="fa-solid fa-database"></i>
-                PostgreSQL
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-white hover:text-black">
-                <i class="fa-solid fa-next-js"></i>
-                NextJS
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-rose-600">
-                <i class="fa-brands fa-nest-js"></i>
-                NestJS
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-green-600">
-                <i class="fa-brands fa-mongodb"></i>
-                MongoDB
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-yellow-500">
-                <i class="fa-brands fa-elasticsearch"></i>
-                ElasticSearch
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-pink-500">
-                <i class="fa-brands fa-meilisearch"></i>
-                Meilisearch
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-sky-700">
-                <i class="fa-brands fa-java"></i>
-                Java
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-violet-600">
-                <i class="fa-brands fa-kotlin"></i>
-                Kotlin
-              </span>
-
-              <span class="flex items-center gap-2 px-4 py-1.5 rounded-full bg-gray-800 text-sm transition hover:bg-yellow-500">
-                <i class="fa-solid fa-plug"></i>
-                REST API
-              </span>
+              <For each={skills}>
+                {(skill, _) => (
+                  <Chip
+                    text={skill.text}
+                    hoverColor={skill.color}
+                    icon={skill.icon}
+                  />
+                )}
+              </For>
             </div>
           </div>
         </div>
