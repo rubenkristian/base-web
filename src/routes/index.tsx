@@ -1,3 +1,4 @@
+import { Meta, Title } from "@solidjs/meta";
 import { For } from "solid-js";
 import Card from "~/components/Card";
 import Chip from "~/components/Chip";
@@ -126,6 +127,21 @@ export default function About() {
 
   return (
     <Container>
+      <Meta name="description" content="Kristian Ruben's personal website and portfolio. Software developer sharing projects, development notes, and technical insights."/>
+      <Meta name="keywords" content="Kristian Ruben, software developer, programming, web development, portfolio, backend developer, Laravel, Linux"/>
+      <Meta name="author" content="Kristian Ruben"/>
+      <Meta name="canonical" content="https://kristian-ruben.my.id/"/>
+      <Meta property="og:type" content="website"/>
+      <Meta property="og:title" content="Kristian Ruben — Software Developer"/>
+      <Meta property="og:description" content="Personal website and portfolio of Kristian Ruben. Projects, technical notes, and development work."/>
+      <Meta property="og:url" content="https://kristian-ruben.my.id/"/>
+      <Meta property="og:site_name" content="Kristian Ruben"/>
+      <Meta name="twitter:card" content="summary_large_image"/>
+      <Meta name="twitter:title" content="Kristian Ruben — Software Developer"/>
+      <Meta name="twitter:description" content="Personal website and portfolio of Kristian Ruben. Projects and development work."/>
+      <Meta name="twitter:description" content="Personal website and portfolio of Kristian Ruben. Projects and development work."/>
+      <Meta name="theme-color" content="#0f172a"/>
+      <Title>Kristian Ruben — Senior Software Developer</Title>
       <main class="text-center mx-auto">
         <div class="min-h-screen md:mx-0 mx-10 flex flex-col gap-4 text-left items-center justify-center">
           <div class="flex flex-col gap-2">
