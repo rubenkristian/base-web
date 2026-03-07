@@ -92,30 +92,35 @@ export default function About() {
     detail: string;
     language: string;
     color: string;
+    link: string;
   }> = [
     {
       repo: "Debio Indexer",
       detail: "Full-stack app with NestJS, ElasticSearch, PostgreSQL.",
       language: "TypeScript",
       color: "text-blue-500",
+      link: "https://github.com/rubenkristian/debio-indexer",
     },
     {
       repo: "Debio Frontend",
       detail: "Frontend with Vue, Materialize CSS.",
       language: "TypeScript",
       color: "text-blue-500",
+      link: "https://github.com/rubenkristian/debio-frontend",
     },
     {
       repo: "Myriad",
       detail: "API app with NodeJS, MongoDB, NextJS.",
       language: "TypeScript",
       color: "text-blue-500",
+      link: "https://github.com/rubenkristian/myriad-api",
     },
     {
-      repo: "Riichi City Indonesia",
+      repo: "Riichi Indonesia",
       detail: "Fullstack app with Go, SolidStart, TypeScript, MySQL, Fiber.",
       language: "Go",
       color: "text-blue-500",
+      link: "https://github.com/riichi-mahjong-dev",
     },
   ];
 
@@ -236,6 +241,7 @@ export default function About() {
                     detail={repo.detail}
                     language={repo.language}
                     color={repo.color}
+                    link={repo.link}
                   />
                 )}
               </For>

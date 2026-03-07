@@ -3,12 +3,13 @@ type CardProps = {
   detail: string;
   language: string;
   color: string;
+  link: string;
 };
 
 export default function Card(props: CardProps) {
   return (
     <a
-      href="https://github.com/rubenkristian/debio-indexer"
+      href={props.link}
       target="_blank"
       class="w-72 bg-gray-800 rounded-xl shadow-lg p-5 transition hover:scale-105 hover:shadow-2xl"
     >
