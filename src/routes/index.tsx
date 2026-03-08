@@ -144,7 +144,7 @@ export default function About() {
       <Title>Kristian Ruben — Senior Software Developer</Title>
       <main class="text-center mx-auto">
         <div class="min-h-screen md:mx-0 mx-10 flex flex-col gap-4 text-left items-center justify-center">
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col w-full gap-2">
             <h1 class="w-full font-bold text-4xl text-white">
               Hello, I'm Kristian Ruben
             </h1>
